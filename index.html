@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="build/css/vendor.css">
-    <link rel="stylesheet" href="build/css/styles.css">
-    <script src="build/js/vendor.min.js"></script>
-    <script type="text/javascript" src="build/js/app.js"></script>
-    <title>TITLE</title>
-  </head>
-  <body>
-<div class="container"></div>
-  <div class="jumbotron">
-    <img id="ghlogo" src="img/GitHub-Mark.png">
-    <h2>GitHub Search Engine</h2>
-  </div>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="build/css/vendor.css">
+  <link rel="stylesheet" href="build/css/styles.css">
+  <script src="build/js/vendor.min.js"></script>
+  <script type="text/javascript" src="build/js/app.js"></script>
+  <title>TITLE</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <img id="ghlogo" src="img/GitHub-Mark.png">
+      <h2>GitHub Search Engine</h2>
+    </div>
+    <h3>Enter the name of the user you are looking for.</h3>
     <input type="text" id="inputUserName" name="name" value="">
     <button id="gitHubUserName" name="button"></button>
 
-    <div id="showUserName"></div>
-    <div id="showUserAvatar"></div>
-    <div id="showRepos"></div>
-    <div id="showEmojis"></div>
+    <div class="row">
+      <div class="col-xs-6">
+        <h5>User Name:</h5><div id="showUserName"></div>
+        <h5>Full Name:</h5><div id="showFullName"></div>
+        <h5>User Avatar:</h5><div id="showUserAvatar"></div>
+      </div> <!--CLOSING LEFT COL-->
+      <div class="col-xs-6">
+        <h5>User Repositories:</h5><div id="showRepos"></div>
+        <div id="showEmojis"></div>
+      </div> <!--CLOSING RIGHT COL-->
+    </div><!--END ROW -->
 
+    <!-- <input type="text" id="searchRepos" name="name" value="">
+    <button id="gitHubSearch" name="button"></button>
 
-<!-- <input type="text" id="searchRepos" name="name" value="">
-<button id="gitHubSearch" name="button"></button>
-
-<div id="showSearch"></div> -->
-
-  </body>
+    <div id="showSearch"></div> -->
+  </div> <!--CLOSING CONTAINER -->
+</body>
 </html>

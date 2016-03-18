@@ -11,16 +11,23 @@ exports.getUserName = function() {
   });
 };
 
+exports.getFullName = function() {
+  var userName = $("#inputUserName").val();
+  $.get("https://api.github.com/users/" + userName + "?access_token=" + apiKey).then(function(response) {
+    console.log(response);
+    $("#showFullName").text(response.name);
+
+  }).fail(function(error) {
+    console.log(error.responseJSON.message);
+  });
+};
+
 exports.getUserAvatar = function() {
   var userName = $("#inputUserName").val();
   $.get("https://api.github.com/users/" + userName + "?access_token=" + apiKey).then(function(response) {
     console.log(response);
-
-
     $("#showUserAvatar").append("<img src='" + response.avatar_url + "'>");
 
-    // var avatar = $("#showUserAvatar").text(response.avatar_url);
-    // avatar.append
   }).fail(function(error) {
     console.log(error.responseJSON.message);
   });
@@ -32,7 +39,7 @@ exports.getRepos = function() {
     console.log(response);
     for(var i = 0; i < response.length; i++)
 
-    $("#showRepos").append("<li>" + response[i].full_name + "</li>");
+    $("#showRepos").append("<li><a href='https://github.com/" + response[i].full_name + "'>" + response[i].full_name + "</a></li>");
 
   }).fail(function(error) {
     console.log(error.responseJSON.message);

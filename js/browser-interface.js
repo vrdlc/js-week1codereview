@@ -5,6 +5,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     getGit.getUserName();
+    getGit.getFullName();
     getGit.getUserAvatar();
     getGit.getRepos();
 
