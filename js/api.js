@@ -1,4 +1,5 @@
 var apiKey = require('./../.env').apiKey;
+var time = moment().format("MM Do YYYY");
 
 exports.getUserName = function() {
   var userName = $("#inputUserName").val();
@@ -39,7 +40,7 @@ exports.getRepos = function() {
     console.log(response);
     for(var i = 0; i < response.length; i++)
 
-    $("#showRepos").append("<li><a href='https://github.com/" + response[i].full_name + "'>" + response[i].full_name + "</a></li>");
+    $("#showRepos").append("<li><a href='https://github.com/" + response[i].full_name + "'>" + response[i].full_name + "</a><p>Date Created: " + moment(response[i].created_at).format("MM Do YYYY") + "</p></li>");
 
   }).fail(function(error) {
     console.log(error.responseJSON.message);
