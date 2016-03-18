@@ -1,8 +1,0 @@
-"*":
-  welcome:
-    showOnStartup: false
-  editor:
-    fontSize: 18
-    invisibles: {}
-    showIndentGuide: true
-    softWrap: true
