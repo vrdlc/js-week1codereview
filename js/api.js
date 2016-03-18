@@ -11,11 +11,26 @@ exports.getUserName = function() {
   });
 };
 
+exports.getUserAvatar = function() {
+  var userName = $("#inputUserName").val();
+  $.get("https://api.github.com/users/" + userName + "?access_token=" + apiKey).then(function(response) {
+    console.log(response);
+
+
+    $("#showUserAvatar").append("<img src='" + response.avatar_url + "'>");
+
+    // var avatar = $("#showUserAvatar").text(response.avatar_url);
+    // avatar.append
+  }).fail(function(error) {
+    console.log(error.responseJSON.message);
+  });
+};
+
 exports.getRepos = function() {
   var userName = $("#inputUserName").val();
   $.get("https://api.github.com/users/" + userName + "/repos?access_token=" + apiKey).then(function(response) {
     console.log(response);
-          for(var i = 0; i < response.length; i++)
+    for(var i = 0; i < response.length; i++)
 
     $("#showRepos").append("<li>" + response[i].full_name + "</li>");
 
@@ -23,3 +38,17 @@ exports.getRepos = function() {
     console.log(error.responseJSON.message);
   });
 };
+
+
+//UNSURE HOW TO CONVERT SEARCH TERMS INTO WHAT THE API REQUIRES IN ORDER TO SEARCH
+// exports.searchRepos = function() {
+//   var search = $("#searchRepos").val();
+//   $.get("https://api.github.com/search/" + search + "access_tokey=" + apiKey).then(function(response) {
+//     console.log(response);
+//
+//     $("#showSearch").append("<li>" + response[i].full_name + "</li>");
+//
+//   }).fail(function(error) {
+//     console.log(error.responseJSON.message);
+//   });
+// };

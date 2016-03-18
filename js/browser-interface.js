@@ -5,24 +5,19 @@ $(document).ready(function() {
     event.preventDefault();
 
     getGit.getUserName();
+    getGit.getUserAvatar();
     getGit.getRepos();
-    // getGit.getRepos();
-    // $("#showRepos").append("<li>" + response[i].full_name + "</li>");
+
   });
 
+// $(document).ready(function() {
+//   $("#gitHubSearch").click(function(event) {
+//     event.preventDefault();
+//
+//     getGit.searchRepos();
+//   });
+// });
 
-  // $("#gitHubUserName").click(function() {
-  //   var userName = $("#inputUserName").val();
-  //   $.get("https://api.github.com/users/" + userName + "?access_token=" + apiKey).then(function(response) {
-  //     console.log(response);
-  //      for(var i = 0; i < response.length; i++)
-  //      $("#showRepos").append("<li>" + response[i].full_name + "</li>");
-  //
-  //
-  //   }).fail(function(error) {
-  //     console.log(error.responseJSON.message);
-  //   });
-  // });
 
 
 
