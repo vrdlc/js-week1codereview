@@ -47,7 +47,13 @@ exports.getRepos = function() {
   });
 };
 
-
+// exports.getEmojis = function() { //RETURNS ONE OBJECT OF ALL EMOJIS, CAN'T PULL SINGLE EMOJI OUT AND DISPLAY
+//   $.get("https://api.github.com/emojis?access_token=" + apiKey).then(function(response) {
+//     console.log(response);
+//
+//   $("#showEmojis").append("<li>" + response.emoji(rice) + "</li>")
+// });
+// };
 //UNSURE HOW TO CONVERT SEARCH TERMS INTO WHAT THE API REQUIRES IN ORDER TO SEARCH
 // exports.searchRepos = function() {
 //   var search = $("#searchRepos").val();

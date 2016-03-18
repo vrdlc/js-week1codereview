@@ -12,20 +12,21 @@
   <div class="container">
     <div class="jumbotron">
       <img id="ghlogo" src="img/GitHub-Mark.png">
-      <h2>GitHub Search Engine</h2>
+      <h2>GitHub User Search Engine</h2>
     </div>
     <h3>Enter the name of the user you are looking for.</h3>
     <input type="text" id="inputUserName" name="name" value="">
-    <button id="gitHubUserName" name="button"></button>
+    <button id="gitHubUserName" name="button" class="btn" onclick="this.disabled='disabled'">Submit</button>
 
     <div class="row">
-      <div class="col-xs-6">
+      <div id="userData" class="col-xs-6">
         <h5>User Name:</h5><div id="showUserName"></div>
         <h5>Full Name:</h5><div id="showFullName"></div>
         <h5>User Avatar:</h5><div id="showUserAvatar"></div>
+        <button id="showUserRepos" name="button" class="btn" onclick="this.disabled='disabled'">Find User's Repositories?</button>
       </div> <!--CLOSING LEFT COL-->
       <div class="col-xs-6">
-        <h5>User Repositories:</h5><div id="showRepos"></div>
+        <h5 id="userRepos" >User Repositories:</h5><div id="showRepos"></div>
 
         <div id="showEmojis"></div>
       </div> <!--CLOSING RIGHT COL-->

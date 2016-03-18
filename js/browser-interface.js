@@ -1,14 +1,22 @@
 var getGit = require('./../js/api.js');
 
 $(document).ready(function() {
+  // getGit.getEmojis();
+
   $("#gitHubUserName").click(function(event) {
+    $("#userData").show();
     event.preventDefault();
 
     getGit.getUserName();
     getGit.getFullName();
     getGit.getUserAvatar();
-    getGit.getRepos();
 
+  });
+
+  $("#showUserRepos").click(function(event) {
+    $("#userRepos").show();
+    event.preventDefault();
+    getGit.getRepos();
   });
 
 // $(document).ready(function() {

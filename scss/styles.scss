@@ -2,22 +2,13 @@ form {
   width: 50%;
   margin:auto;
 }
-label {
-  width:25%;
-}
-label, input {
-  display: inline-block;
-}
-input {
-  width: 75%;
-}
-input[type=submit] {
-  width:100%;
-}
+
 
 body {
-  background-color: grey;
+  background-color: #717A71;
 }
+
+
 
 #ghlogo {
   height: 200px;
@@ -26,4 +17,22 @@ body {
 #showUserAvatar, img {
   height: 100px;
   border-radius: 100px;
+}
+
+#userData, #userRepos {
+  display: none;
+}
+
+.btn,
+.btn.disabled:hover,
+.btn:active,
+.btn:visited,
+.btn:focus,
+.btn:disabled {
+    background-color: #99938E;
+    border-color: #99938E;
+}
+
+.jumbotron {
+  background-color: #A6ADA3;
 }
