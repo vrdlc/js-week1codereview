@@ -8,6 +8,9 @@ body {
   background-color: #717A71;
 }
 
+a {
+  color: #36B500
+}
 
 
 #ghlogo {
@@ -17,6 +20,8 @@ body {
 #showUserAvatar, img {
   height: 100px;
   border-radius: 100px;
+  margin-bottom: 25px;
+
 }
 
 #userData, #userRepos {
