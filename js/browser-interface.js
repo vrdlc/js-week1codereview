@@ -5,7 +5,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     getGit.getUserName();
-    $("#showUserName").text(response.login);
+    getGit.getRepos();
+    // getGit.getRepos();
+    // $("#showRepos").append("<li>" + response[i].full_name + "</li>");
   });
 
 
